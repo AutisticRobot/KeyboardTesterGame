@@ -3,15 +3,13 @@
 <title>Keyboard Tester</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Quality Web Solutions Inc.">
-<meta name="keywords" content="Keyboard, test, tester, diagnostic">
-<meta name="description" content="Test every key on your computer keyboard from within your browser for free.">
-<!--
-<script type="text/javascript" async="" src="Keyboard%20Tester_files/google-analytics_ga.js"></script>
--->
+
+<!--Script Files-->
 <script type="text/javascript" language="JavaScript" src="Keyboard%20Tester_files/jquery.min.js"></script>
 <script type="text/javascript" language="JavaScript" src="Keyboard%20Tester_files/keyboardtester_min.js"></script>
 <script type="text/javascript" language="JavaScript" src="Keyboard%20Tester_files/shortcut_min.js"></script>
+<script type="text/javascript" language="JavaScript" src="Keyboard%20Tester_files/saveSystem.js"></script>
+
 <link rel="stylesheet" type="text/css" href="Keyboard%20Tester_files/keyboardtester_min.css" media="screen">
 </head>
 
@@ -30,6 +28,7 @@
 </select> <span title="Patent Pending">Monophonic Key Sound Experience</span></div>
 <textarea id="testarea" cols="60" rows="2"></textarea> <input type="text" id="hidden_text" onfocus="go_testarea();">
 <input type="button" name="reset" value="Reset" onclick="reset();">
+<input type="button" name="save" value="Save" onclick="save();">
 </div>
 <table id="keyboard">
 <tbody><tr class="key_small"><td><div class="key_row"><div id="key27" class="key_un">Esc</div>
