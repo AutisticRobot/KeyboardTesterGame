@@ -15,22 +15,12 @@
 
 <!-- This Website was ripped from www.keyboardtester.com by Tyler M. Kormann (www.tylerkormann.com) -->
 <body>
-<div id="resetbutton">
-<div id="soundArea"><select name="sound" id="soundSelect">
+<div class="left">
 
-<option value="none">(None)</option>
-<option value="cycle,SDFF/,S.mp3,D.mp3,F1.mp3,F2.mp3" selected="selected">SDFF</option>
-<option value="single,click.wav">Click</option>
-<option value="single,josh.mp3">Josh</option>
-<option value="single,roblox-death-sound_1.mp3">Oof</option>
-<option value="single,deltarune-explosion.mp3">Explosion.mp3</option>
-
-</select> <span title="Patent Pending">Monophonic Key Sound Experience</span></div>
-<textarea id="testarea" cols="60" rows="2"></textarea> <input type="text" id="hidden_text" onfocus="go_testarea();">
-<input type="button" name="reset" value="Reset" onclick="reset();">
-<input type="button" name="save" value="Save" onclick="save();">
-<input type="file" name="Load From File" onchange="loadFile(this);">
+<div class="stage">
+<p>hello. I am Paceholder text</p>
 </div>
+<div class="keyBlock">
 <table id="keyboard">
 <tbody><tr class="key_small"><td><div class="key_row"><div id="key27" class="key_un">Esc</div>
 <div id="key112" class="key_un">F1</div>
@@ -199,6 +189,26 @@
 <ol id="notes"><li>To test numeric keypad be sure <span class="key_name">Num Lock</span> is ON.</li>
 <li>Tester cannot differentiate between duplicate keys (<span class="key_name">Shift, Ctrl, Alt, Enter</span>). Be sure to test both of each.</li>
 </ol>
-<div align="center">
+</div>
+
+</div>
+
+<div class="menu">
+<div id="soundArea"><select name="sound" id="soundSelect">
+
+<option value="none">(None)</option>
+<option value="cycle,SDFF/,S.mp3,D.mp3,F1.mp3,F2.mp3" selected="selected">SDFF</option>
+<option value="single,click.wav">Click</option>
+<option value="single,josh.mp3">Josh</option>
+<option value="single,roblox-death-sound_1.mp3">Oof</option>
+<option value="single,deltarune-explosion.mp3">Explosion.mp3</option>
+
+</select> <span title="Patent Pending">Monophonic Key Sound Experience</span></div>
+<!--
+<textarea id="testarea" cols="60" rows="2"></textarea> <input type="text" id="hidden_text" onfocus="go_testarea();"-->
+<input type="button" name="reset" value="Reset" onclick="reset();">
+<input type="button" name="save" value="Save" onclick="save();">
+<input type="file" name="Load From File" onchange="loadFile(this);">
+</div>
 
 </body></html>
