@@ -3,13 +3,23 @@
 //so the code will look nicer to to look at, and approach.
 
 
+//save formater
+async function saveData()
+{
+  return "5";
+}
+
 //save Functiona
-var saveURL = null;
 async function save()
 {
-  let file = new File(["testing the save fucinality"],"SaveTest.txt" , {type: 'test/plain'});
-
-  saveAs(file);
+  saveText = "hi";
+  saveText += saveData();
+  const blob = new Blob([saveText], {type: "text/plain"});
+  const fileUrl = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.download = "tempName";
+  link.href = fileUrl;
+  link.click();
 }
 
 //Load Functoin
