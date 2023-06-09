@@ -2,6 +2,7 @@ var FALSE_FUNCTION = new Function("return false");
 var key_prefix = "#key";
 var cycleState = 0;
 var changeCheck = "";
+keyboardFilled = false;
 $(document).bind("keydown", function(b) {//click sound function
     b.preventDefault();
     var soundPath = "sounds/";
@@ -91,6 +92,12 @@ function disable()
     }
     return "hi";
 }
+
+function checkCompletion()
+{
+    keyboardFilled = !$('div').hasClass('key_un')
+}
+
 function key_highlight(a) {
     key_clear(a);
     $(key_prefix + a).addClass("key_highlight");
@@ -100,7 +107,7 @@ function key_highlight(a) {
 function key_pressed(a) {
     key_clear(a);
     if (a == 16 || a == 17 || a == 18 || a == 13 || a.match(/b$/)) {
-        new_class = "key_pressed_m"
+        new_class = "key_pressed"//_m"
     } else {
         new_class = "key_pressed"
     }
@@ -120,8 +127,6 @@ function reset_keyboard() {
     a.each(function(b, c) {
         c.className = "key_un"
     });
-    $("#testarea").attr("value", "");
-    $("#testarea").focus()
 }
 
 function go_testarea() {

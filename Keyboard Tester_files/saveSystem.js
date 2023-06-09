@@ -4,16 +4,24 @@
 
 
 //save formater
-async function saveData()
+function saveData()
 {
-  return "5";
+  output;//use delimiter of ","
+
+
+  return output;
+}
+
+async function loadData(input)
+{
+  data = input.split(",");
+
 }
 
 //save Functiona
 async function save()
 {
-  saveText = "hi";
-  saveText += saveData();
+  saveText = saveData();
   const blob = new Blob([saveText], {type: "text/plain"});
   const fileUrl = URL.createObjectURL(blob);
   const link = document.createElement("a");
