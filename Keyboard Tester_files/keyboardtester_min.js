@@ -2,7 +2,9 @@ var FALSE_FUNCTION = new Function("return false");
 var key_prefix = "#key";
 var cycleState = 0;
 var changeCheck = "";
-keyboardFilled = false;
+var boardCounter = 0;
+var keyCounter = 0;
+var keyboardFilled = false;
 $(document).bind("keydown", function(b) {//click sound function
     b.preventDefault();
     var soundPath = "sounds/";
@@ -76,6 +78,11 @@ function reset()
 {
     reset_keyboard();
     disable();
+    if(keyboardFilled)
+    {
+        keyboardFilled = false;
+        boardCounter++;
+    }
 }
 function enable()
 {
