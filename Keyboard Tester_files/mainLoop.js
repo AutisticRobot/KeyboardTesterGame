@@ -8,7 +8,6 @@ function main() {
 displayStage(interval);
 
 
-
 }
 setInterval(main, interval);
 }

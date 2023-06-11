@@ -6,7 +6,7 @@
 //save formater
 function saveData()
 {
-  output;//use delimiter of ","
+  var output;//use delimiter of ","
 
 
   return output;

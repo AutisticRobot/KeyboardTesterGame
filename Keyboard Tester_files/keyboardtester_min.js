@@ -9,7 +9,6 @@ $(document).bind("keydown", function(b) {//click sound function
     b.preventDefault();
     var soundPath = "sounds/";
     var selection = $("#soundSelect").val().split(',');
-    console.log(selection[0]);
     switch (selection[0]) 
     {
         case "none":
@@ -104,8 +103,16 @@ function checkCompletion()
 {
     keyboardFilled = !$('div').hasClass('key_un')
 }
+function checkKeyClick(a)
+{
+    if($(key_prefix + a).hasClass("key_un"))
+    {
+        keyCounter++;
+    }
+}
 
 function key_highlight(a) {
+    checkKeyClick(a);
     key_clear(a);
     $(key_prefix + a).addClass("key_highlight");
     setTimeout("key_pressed('" + a + "')", 300)
