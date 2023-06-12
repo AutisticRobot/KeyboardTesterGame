@@ -33,7 +33,9 @@ body {
 }
 
 #keyboard {
-    clear: both
+    clear: both;
+    height: 256px;
+    width: 1024px;
 }
 
 #keyboard tr td {
