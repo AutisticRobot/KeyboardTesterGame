@@ -213,12 +213,14 @@
 <option value="single,roblox-death-sound_1.mp3">Oof</option>
 <option value="single,deltarune-explosion.mp3">Explosion.mp3</option>
 
-</select> <span title="Patent Pending">Monophonic Key Sound Experience</span></div>
+</select> <span title="Patent Cancled">Monophonic Key Sound Experience</span></div>
 <!--
 <textarea id="testarea" cols="60" rows="2"></textarea> <input type="text" id="hidden_text" onfocus="go_testarea();"-->
 <input type="button" name="reset" value="Reset" onclick="reset();">
 <input type="button" name="save" value="Save" onclick="save();">
-<input type="file" name="Load From File" onchange="loadFile(this);">
+<input type="file" name="Load From File" onchange="loadFile(this.files[0]);">
+<!--input type="file" name="save/load unit test" value="Save & Load Unit Test" onchange="testSave(this.files[0]);"--><!--function doesn't work-->
+<input type="button" name="save" value="Save & Load Unit Test" onclick="testSave(null);">
 </div>
 
 </body></html>

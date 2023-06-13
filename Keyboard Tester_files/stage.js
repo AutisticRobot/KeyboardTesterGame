@@ -6,6 +6,7 @@ function displayStage(delta)//display stage is set to run every loop of main(), 
     <p>
         hi
         ` + keyCounter + `
+        ` + boardCounter + `
     </p>
     `
     
