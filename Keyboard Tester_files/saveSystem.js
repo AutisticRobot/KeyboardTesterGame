@@ -6,17 +6,23 @@
 //save formater
 function saveData()
 {
-  var output;//use delimiter of ","
-
+  var output = "";//use delimiter of ","
+  
+  output += keyCounter + ",";
+  output += boardCounter + ","
 
   return output;
 }
 
-async function loadData(input)
+function unformatData(input)
 {
-  data = input.split(",");
+  var data = String(input).split(",");
+
+  keyCounter = data[0];
+  boardCounter = data[1];
 
 }
+
 
 //save Functiona
 async function save()
@@ -31,19 +37,47 @@ async function save()
 }
 
 //Load Functoin
-function loadFile(input)
+async function loadFile(file)
 {
-  let file = input.files[0];
-
+  var output;
   let reader = new FileReader();
 
   reader.readAsText(file);
 
   reader.onload = function()
   {
-  console.log(reader.result);
-
+    unformatData(reader.result);
+    output = reader.result;//return result for debuging;
+    console.log(output);
   }
 
+  return output;
+
+}
+
+//save/load unit test
+async function testSave(file)
+{
+  var file1;
+  var file2;
+  if(file === null)
+  {
+    file1 = saveData()
+    unformatData(file1);
+  }else{
+    file1 = loadFile(file);
+  }
+  file2 = saveData();
+
+  if(file1 === file2)
+  {
+    console.log("testSave Passed");
+    return true;
+  }else{
+    console.log("testSave Failed");
+    console.log(file1);
+    console.log(file2);
+    return false;
+  }
 
 }
