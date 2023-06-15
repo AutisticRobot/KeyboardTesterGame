@@ -6,7 +6,7 @@ var boardCounter = 0;
 var keyCounter = 0;
 var keyboardFilled = false;
 $(document).bind("keydown", function(b) {//click sound function
-    b.preventDefault();
+    //b.preventDefault();
     var soundPath = "sounds/";
     var selection = $("#soundSelect").val().split(',');
     switch (selection[0]) 
@@ -76,28 +76,28 @@ $(document).ready(function() {
 function reset()
 {
     reset_keyboard();
-    disable();
+    //disable();
     if(keyboardFilled)
     {
         keyboardFilled = false;
         boardCounter++;
     }
 }
-function enable()
-{
-    document.onkeyup = function(e)
-    {
-        return true;
-    }
-}
-function disable()
-{
-    document.onkeyup = function(e)
-    {
-        return false;
-    }
-    return "hi";
-}
+//function enable()
+//{
+//    document.onkeyup = function(e)
+//    {
+//        return true;
+//    }
+//}
+//function disable()
+//{
+//    document.onkeyup = function(e)
+//    {
+//        return false;
+//    }
+//    return "hi";
+//}
 
 function checkCompletion()
 {
@@ -141,31 +141,28 @@ function reset_keyboard() {
     a.each(function(b, c) {
         c.className = "key_un"
     });
+    $("#testarea").attr("value", "");
+    $("#testarea").focus()
 }
 
 function go_testarea() {
     $("#testarea").focus()
 }
 
+
 function disableShortcuts() {
     document.onhelp = FALSE_FUNCTION;
     window.onhelp = FALSE_FUNCTION;
-    document.onkeydown = function b(e) {
+    document.onkeydown = function b() {
         if (typeof event != "undefined") {
             if ((event.keyCode >= 112) && (event.keyCode <= 123)) {
                 event.keyCode = 0;
-                e.preventDefault();
                 return false
             }
         }
-        return false;
     };
     for (var a = 1; a < 13; a++) {
         shortcut.add("f" + a, FALSE_FUNCTION)
     }
     shortcut.add("'", FALSE_FUNCTION)
 };
-
-window.addEventListener("keyup", function (e){
-    event.preventDefault();
-},{capture: true})
