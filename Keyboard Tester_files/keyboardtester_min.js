@@ -5,6 +5,7 @@ var changeCheck = "";
 var boardCounter = 0;
 var keyCounter = 0;
 var keyboardFilled = false;
+
 $(document).bind("keydown", function(b) {//click sound function
     //b.preventDefault();
     var soundPath = "sounds/";
@@ -48,7 +49,7 @@ $(document).bind("keydown", function(b) {//click sound function
         break;
 
     }
-    return false;
+    //return false;
 });
 $(document).bind("keyup", function(b) {
     var a = (b.keyCode ? b.keyCode : b.which);
