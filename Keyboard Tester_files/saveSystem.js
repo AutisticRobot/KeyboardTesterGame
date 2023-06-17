@@ -31,7 +31,12 @@ async function save()
   const blob = new Blob([saveText], {type: "text/plain"});
   const fileUrl = URL.createObjectURL(blob);
   const link = document.createElement("a");
-  link.download = "tempName";
+  var saveName = document.getElementById("saveNameInput").value;
+  if(!saveName.includes("."))
+  {
+    saveName += ".txt";
+  }
+  link.download = saveName;
   link.href = fileUrl;
   link.click();
 }
