@@ -11,3 +11,12 @@ function getAllPressedKeys()
     };
     return allPressedKeys;
 }
+
+function showAllKeys()
+{
+    var allHid = document.getElementsByClassName("hidden");
+
+    for(const element of allHid) {
+        element.removeClass("hidden");
+    }
+}

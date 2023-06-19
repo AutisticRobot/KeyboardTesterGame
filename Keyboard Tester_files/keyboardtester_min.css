@@ -140,3 +140,7 @@ body {
 .pcliqGo:hover img {
     border-color: blue
 }
+
+.hidden {
+    display: none;
+}
