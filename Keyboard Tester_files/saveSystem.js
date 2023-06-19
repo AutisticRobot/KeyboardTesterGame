@@ -2,6 +2,7 @@
 //There may be comments that dont say much, those will be there
 //so the code will look nicer to to look at, and approach.
 
+const saveNameInput = document.getElementById("saveNameInput");
 
 //save formater
 function saveData()
@@ -25,13 +26,11 @@ function unformatData(input)
 
 
 //save Functiona
-async function save()
+async function save(saveText, saveName)
 {
-  saveText = saveData();
   const blob = new Blob([saveText], {type: "text/plain"});
   const fileUrl = URL.createObjectURL(blob);
   const link = document.createElement("a");
-  var saveName = document.getElementById("saveNameInput").value;
   if(!saveName.includes("."))
   {
     saveName += ".txt";

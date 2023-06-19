@@ -221,7 +221,7 @@
 <!--
 <textarea id="testarea" cols="60" rows="2"></textarea> <input type="text" id="hidden_text" onfocus="go_testarea();"-->
 <input type="button" name="reset" value="Reset" onclick="reset();">
-<input type="button" name="save" value="Save" onclick="save();">
+<input type="button" name="save" value="Save" onclick="save(saveData(), saveNameInput.value);">
 <input id="saveNameInput" type="text" placeholder="Save File As:">
 <input type="file" name="Load From File" onchange="loadFile(this.files[0]);">
 <!--input type="file" name="save/load unit test" value="Save & Load Unit Test" onchange="testSave(this.files[0]);"--><!--function doesn't work-->
