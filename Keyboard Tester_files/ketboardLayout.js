@@ -20,3 +20,12 @@ function showAllKeys()
         element.removeClass("hidden");
     }
 }
+
+function loadLayout(unformatedKeyList)
+{
+    var keyList = String(unformatedKeyList).split(",");
+
+    var allUn = document.getElementsByClassName("key_un");
+    var allPressed = document.getElementsByClassName("key_pressed");
+    var allLight = document.getElementsByClassName("key_highlight");
+}
