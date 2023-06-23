@@ -3,6 +3,7 @@
 //so the code will look nicer to to look at, and approach.
 
 const saveNameInput = document.getElementById("saveNameInput");
+var latestFileOut;
 
 //save formater
 function saveData()
@@ -48,14 +49,9 @@ async function loadFile(file)
 
   reader.readAsText(file);
 
-  reader.onload = function()
-  {
-    unformatData(reader.result);
-    output = reader.result;//return result for debuging;
-    console.log(output);
-  }
-
-  return output;
+  reader.onload = function(){
+    latestFileOut = reader.result;
+  };
 
 }
 
@@ -69,7 +65,7 @@ async function testSave(file)
     file1 = saveData()
     unformatData(file1);
   }else{
-    file1 = loadFile(file);
+    file1 = loadFile(file, function(e){unformatData(e.target.result)});
   }
   file2 = saveData();
 
