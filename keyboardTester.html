@@ -221,10 +221,13 @@
 <!--
 <textarea id="testarea" cols="60" rows="2"></textarea> <input type="text" id="hidden_text" onfocus="go_testarea();"-->
 <input type="button" name="save" value="Save" onclick="save(saveData(), saveNameInput.value);">
+<input type="button" name="save" value="Save keyboard Layout" onclick="save(getAllPressedKeys(), saveNameInput.value);">
 <input id="saveNameInput" type="text" placeholder="Save File As:">
 <input type="file" name="Load From File" onchange="loadFile(this.files[0]);">
-<input type="button" name="Load From File" onclick="unformatData(latestFileOut);">
+<input type="button" value="Load From File" name="Load From File" onclick="unformatData(latestFileOut);">
+<input type="button" value="Load Layout From File" name="Load Layout From File" onclick="loadLayout(latestFileOut);">
 <input type="button" name="reset" value="show all keys" onclick="showAllKeys();">
+<input type="button" name="reset" value="reset" onclick="reset_keyboard();">
 <input type="button" name="save" value="Save & Load Unit Test" onclick="testSave(null);">
 </div>
 

@@ -17,7 +17,8 @@ function showAllKeys()
     var allHid = document.getElementsByClassName("hidden");
 
     for(const element of allHid) {
-        element.removeClass("hidden");
+        $(element).removeClass("hidden");
+        $(element).className ="key_un";
     }
 }
 
