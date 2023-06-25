@@ -14,32 +14,36 @@ function getAllPressedKeys()
 
 function showAllKeys()
 {
-    var allHid = document.getElementsByClassName("hidden");
+    var allHid = $(".hidden");
 
-    for(const element of allHid) {
-        $(element).removeClass("hidden");
-        $(element).className ="key_un";
-    }
+    allHid.each(function(b,c) {
+        c.className = "key_un";
+    })
 }
 
 function loadLayout(unformatedKeyList)
 {
     var keyList = String(unformatedKeyList).split(",");
 
-    var allUn = document.getElementsByClassName("key_un");
-    var allPressed = document.getElementsByClassName("key_pressed");
-    var allLight = document.getElementsByClassName("key_highlight");
-    for(const element of allUn) {
-        element.className = "hidden";
-    }
-    for(const element of allPressed) {
-        element.className = "hidden";
-    }
-    for(const element of allLight) {
-        element.className = "hidden";
-    }
+    var allUn = $(".key_un");
+    var allPressed = $(".key_pressed");
+    var allLight = $(".key_highlight");
+
+    allUn.each(function(b,c) {
+        c.className = "hidden";
+    })
+    allPressed.each(function(b,c) {
+        c.className = "hidden";
+    })
+    allLight.each(function(b,c) {
+        c.className = "hidden";
+    })
+
 
     for(const e of keyList){
-        $(e).removeClass("hidden");
+        var key = "#" + e;
+        $(key).addClass = "key_un";
+        $(key).removeClass = "hidden";
+        console.log(key, e);
     }
 }
