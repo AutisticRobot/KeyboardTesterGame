@@ -49,7 +49,7 @@ $(document).bind("keydown", function(b) {//click sound function
         break;
 
     }
-    //return false;
+    //return false;a
 });
 $(document).bind("keyup", function(b) {
     var a = (b.keyCode ? b.keyCode : b.which);
@@ -68,6 +68,7 @@ $(document).bind("keyup", function(b) {
     if ($(key_prefix + a + "b")) {
         key_highlight(a + "b")
     }
+    checkCompletion();
 });
 $(document).ready(function() {
     disableShortcuts();
