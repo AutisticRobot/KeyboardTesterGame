@@ -39,11 +39,10 @@ function loadLayout(unformatedKeyList)
         c.className = "hidden";
     })
 
+    keyList.pop();
 
     for(const e of keyList){
-        var key = "#" + e;
-        $(key).addClass = "key_un";
-        $(key).removeClass = "hidden";
-        console.log(key, e);
+        var key = document.getElementById(e);
+        key.className = "key_un";
     }
 }
