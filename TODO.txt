@@ -1,5 +1,4 @@
 Add game parts
-add keyboard layout picker/saver
 add graphics
 add readme
 add releases

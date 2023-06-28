@@ -69,6 +69,11 @@ $(document).bind("keyup", function(b) {
         key_highlight(a + "b")
     }
     checkCompletion();
+    const resetDelay = document.getElementById("resetDelay").checked;
+    if(resetDelay && keyboardFilled)
+    {
+        setTimeout("reset()", 2500);
+    }
 });
 $(document).ready(function() {
     disableShortcuts();
@@ -85,21 +90,6 @@ function reset()
         boardCounter++;
     }
 }
-//function enable()
-//{
-//    document.onkeyup = function(e)
-//    {
-//        return true;
-//    }
-//}
-//function disable()
-//{
-//    document.onkeyup = function(e)
-//    {
-//        return false;
-//    }
-//    return "hi";
-//}
 
 function checkCompletion()
 {
