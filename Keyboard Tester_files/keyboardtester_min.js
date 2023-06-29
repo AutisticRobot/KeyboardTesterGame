@@ -4,6 +4,7 @@ var cycleState = 0;
 var changeCheck = "";
 var boardCounter = 0;
 var keyCounter = 0;
+var wallet = 0;
 var keyboardFilled = false;
 
 $(document).bind("keydown", function(b) {//click sound function
