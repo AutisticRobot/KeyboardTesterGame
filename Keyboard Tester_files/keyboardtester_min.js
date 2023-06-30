@@ -101,6 +101,7 @@ function checkKeyClick(a)
     if($(key_prefix + a).hasClass("key_un"))
     {
         keyCounter++;
+        wallet++;
     }
 }
 
