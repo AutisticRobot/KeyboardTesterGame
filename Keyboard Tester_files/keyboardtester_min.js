@@ -5,6 +5,7 @@ var changeCheck = "";
 var boardCounter = 0;
 var keyCounter = 0;
 var wallet = 0;
+var boardMulti = 1, keyMulti = 1, moneyMulti = 1;
 var keyboardFilled = false;
 
 $(document).bind("keydown", function(b) {//click sound function
@@ -88,7 +89,7 @@ function reset()
     if(keyboardFilled)
     {
         keyboardFilled = false;
-        boardCounter++;
+        boardCounter += boardMulti;
     }
 }
 
@@ -100,8 +101,8 @@ function checkKeyClick(a)
 {
     if($(key_prefix + a).hasClass("key_un"))
     {
-        keyCounter++;
-        wallet++;
+        keyCounter += keyMulti;
+        wallet += moneyMulti;
     }
 }
 

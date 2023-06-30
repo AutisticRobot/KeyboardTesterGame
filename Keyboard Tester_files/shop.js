@@ -1,14 +1,51 @@
 
-function buyBoost(costBoard, boostKey, cost, boostAmount)
+function buyBoost(costType, boostType, cost, boostAmount)
 {
     var canAfford = false;
-    if(costBoard)
+    switch(costType)
     {
+        case "board":
         if(cost <= boardCounter)
         {
             canAfford = true;
+            boardCounter -= cost;
         }
-    }else{
+        break;
+        case "key":
+            if(cost <= keyCounter)
+            {
+                canAfford = true;
+                keyCounter -= cost;
+            }
+        break;
+        case "money":
+            if(cost <= wallet)
+            {
+                canAfford = true;
+                wallet -= cost;
+            }
+        break;
+    }
 
+    switch(boostType)
+    {
+        case "board":
+            if(canAfford)
+            {
+                boardMulti += boostAmount;
+            }
+        break;
+        case "key":
+            if(canAfford)
+            {
+                keyMulti += boostAmount;
+            }
+        break;
+        case "money":
+            if(canAfford)
+            {
+                moneyMulti += boostAmount;
+            }
+        break;
     }
 }
